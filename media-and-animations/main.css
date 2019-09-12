@@ -1,1 +1,47 @@
 /* all css here */
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.box {
+    height: 200px;
+    width: 900px;
+    background-color: red;
+    animation-name: spinner;
+    animation-duration: 2s;
+    animation-delay: 0s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-fill-mode: forwards;
+}
+
+@keyframes spinner {
+    0% {
+        background-color: green;
+        transform: rotate(0deg)
+    }
+
+    50% {
+        background-color: purple;
+    }
+
+    100% {
+        background-color: green;
+        transform: rotate(360deg)
+    }
+}
+
+@media (max-width: 1100px){
+    .box{
+        background-color: blue;
+    }
+}
+
+@media (min-width: 500px) and (max-width: 800px){
+    .box{
+        background-color: purple;
+    }
+}
